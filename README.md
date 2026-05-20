@@ -90,7 +90,7 @@ The captured cookie will be stored in `dsk/cookies.json` and automatically used 
 from dsk.api import DeepSeekAPI
 
 # Initialize with your auth token
-api = DeepSeekAPI("YOUR_AUTH_TOKEN")
+api = DeepSeekAPI("YOUR_AUTH_TOKEN_HERE")
 
 # Create a new chat session
 chat_id = api.create_chat_session()
@@ -101,6 +101,8 @@ for chunk in api.chat_completion(chat_id, prompt):
     if chunk['type'] == 'text':
         print(chunk['content'], end='', flush=True)
 ```
+
+See `main.example.py` for a complete working example.
 
 ### Advanced Features
 
